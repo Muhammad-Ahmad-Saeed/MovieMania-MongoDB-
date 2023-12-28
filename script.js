@@ -77,12 +77,52 @@ app.get("/", async (req, res) => {
       <html>
         <head>
           <title>MovieMania</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 20px;
+            }
+
+            h1 {
+              color: #333;
+            }
+
+            ul {
+              list-style-type: none;
+              padding: 0;
+            }
+
+            li {
+              margin-bottom: 20px;
+              padding: 15px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+            }
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+            }
+
+            input {
+              margin-bottom: 10px;
+              padding: 5px;
+            }
+
+            button {
+              padding: 8px 16px;
+              background-color: #4caf50;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+          </style>
         </head>
         <body>
           <h1>Movies</h1>
           <ul>
             ${movies.map(movie => `
-            <br>
               <li>
                 <strong>Title:</strong> ${movie.title}<br>
                 <strong>Duration:</strong> ${movie.Duration} mins<br>
